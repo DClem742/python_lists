@@ -80,14 +80,14 @@ while run == True:
         checked_in = False
         while checked_in == False:
             location = get_room_and_floor('in')
-            room_empty = is_room_empty(location[0], location[1])
+            room_empty = is_room_empty(location[0], location[1]) #I'm confused about the location[0] and location[1] here
             if room_empty == True:
                 checked_in = start_checkin(location)
             else:
                 print("That room is occupied, please choose another room.")
                 checked_in = False
 
-    elif status == 'out':
+    elif status == 'out': #why is this an elif?
         checked_out = False
         while checked_out == False:
             location = get_room_and_floor('out')
